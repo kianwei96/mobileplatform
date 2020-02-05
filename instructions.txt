@@ -1,0 +1,23 @@
+launch ros stuff, using back map "maptest1"
+	bash ~/launchExp_kwtest.sh 
+	
+configure rewards on map "maptest1"
+	cd ~/Desktop/MonkeyGUI-master
+	python UserInput_v3.py
+	
+setup connection to send reward cues to phone
+	cd ~/Desktop/MonkeyGUI-master
+	./tcp-server 8080 8081
+
+activate monkey joystick
+	cd ~/Desktop/MonkeyGUI-master
+	python controller_joystick.py
+
+start data recording
+	cd ~/Desktop/MonkeyGUI-master
+	./recordExperiment.sh
+
+input settings, then run experiment
+	cd ~/Desktop/MonkeyGUI-master
+	python gui.py
+
